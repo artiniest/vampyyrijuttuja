@@ -6,10 +6,11 @@ public class Enemy : MonoBehaviour
 {
 	protected int health = 1;
 	protected int dmg = 1;
+	protected int atkRate = 1;
 	protected float moveRate = 2;
 	protected float minDistance = 1.5f;
 
-	public GameObject player;
+	protected GameObject player;
 	public Animator mator;
 
 	protected void Start ()
@@ -23,11 +24,6 @@ public class Enemy : MonoBehaviour
 		{
 			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.5f);
 		}
-	}
-
-	protected void Attack ()
-	{
-		//Attack
 	}
 
 	protected void TakeDmg()
