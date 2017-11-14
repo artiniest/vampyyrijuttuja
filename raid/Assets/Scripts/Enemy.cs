@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour 
 {
-	protected int health = 1;
+	public int health = 1;
 	protected int dmg = 1;
 	protected int atkRate = 1;
 	protected float moveRate = 2;
@@ -26,9 +26,17 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	void OnTriggerStay (Collider other)
+	{
+		if (other.tag == "Player" && Player.attacked == true) 
+		{
+			TakeDmg ();
+		}
+	}
+
 	protected void TakeDmg()
 	{
-		health -= 1;
+		health --;
 
 		if (health < 1) 
 		{

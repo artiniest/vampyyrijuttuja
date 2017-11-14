@@ -7,8 +7,8 @@ public class Enemy_torch : Enemy
 	void Start ()
 	{
 		base.Start ();
-		health = 3;
-		dmg = 1;
+		health = 10;
+		dmg = 10;
 		atkRate = 1;
 		moveRate = 0.25f;
 
