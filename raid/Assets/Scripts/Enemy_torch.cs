@@ -7,7 +7,6 @@ public class Enemy_torch : Enemy
 	void Start ()
 	{
 		base.Start ();
-		health = 10;
 		dmg = 10;
 		atkRate = 1;
 		moveRate = 0.25f;
@@ -15,12 +14,20 @@ public class Enemy_torch : Enemy
 		InvokeRepeating ("MoveTowards", 1f, moveRate);
 		InvokeRepeating ("Attack", 0, atkRate);
 	}
-
+		
 	void Attack()
 	{
 		if (Vector2.Distance (transform.position, player.transform.position) <= minDistance)//&&playerdodges) 
 		{
-			Player.hitPoints -=dmg;
+			Player.hitPoints -= dmg;
+		}
+	}
+
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.tag == "Player" && Player.attacked == true) 
+		{
+			Invoke ("Die", 0);	
 		}
 	}
 }

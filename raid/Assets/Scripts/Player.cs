@@ -25,12 +25,15 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		moveDirection = new Vector2 (Input.GetAxis ("Horizontal"), 0);
-		moveDirection = transform.TransformDirection (moveDirection);
-		moveDirection *= moveSpeed;
+		if (attacked == false) 
+		{
+			moveDirection = new Vector2 (Input.GetAxis ("Horizontal"), 0);
+			moveDirection = transform.TransformDirection (moveDirection);
+			moveDirection *= moveSpeed;
 
-		moveDirection.y -= gravity * Time.deltaTime;
-		controller.Move (moveDirection);
+			moveDirection.y -= gravity * Time.deltaTime;
+			controller.Move (moveDirection);
+		}
 
 		hpDisplay.text = hitPoints.ToString();
 
@@ -39,7 +42,6 @@ public class Player : MonoBehaviour
 		} else {
 			maattori.SetBool ("Idle", false);
 		}
-
 
 		if (Input.GetKey (KeyCode.D)) 
 		{
@@ -57,11 +59,23 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.E)) 
 		{
+			maattori.SetTrigger ("FastAttack");
 			attacked = true;
-
-		} else if (Input.GetKeyUp (KeyCode.E)) 
-		{
-			attacked = false;
 		}
 	}
+
+	public void CancelAttack()
+	{
+		attacked = false;
+	}
+
+	IEnumerator OnTriggerStay (Collider other)
+	{
+		if (Input.GetKeyDown (KeyCode.E) && attacked == false) 
+		{
+			yield return new WaitForSeconds (0.25f);
+			Destroy (other.gameObject);
+		}
+	}
+
 }
