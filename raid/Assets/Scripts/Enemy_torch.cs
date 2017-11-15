@@ -22,12 +22,4 @@ public class Enemy_torch : Enemy
 			Player.hitPoints -= dmg;
 		}
 	}
-
-	void OnTriggerEnter (Collider other)
-	{
-		if (other.tag == "Player" && Player.attacked == true) 
-		{
-			Invoke ("Die", 0);	
-		}
-	}
 }

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 	public float gravity = 20f;
 
 	public static bool attacked = false;
+	float atkTimer = 0f;
 
 	void Start ()
 	{
@@ -33,6 +34,15 @@ public class Player : MonoBehaviour
 
 			moveDirection.y -= gravity * Time.deltaTime;
 			controller.Move (moveDirection);
+
+			if (Input.GetKey (KeyCode.D)) 
+			{
+				rendo.flipX = false;
+
+			} else if (Input.GetKey (KeyCode.A)) 
+			{
+				rendo.flipX = true;
+			}
 		}
 
 		hpDisplay.text = hitPoints.ToString();
@@ -43,24 +53,21 @@ public class Player : MonoBehaviour
 			maattori.SetBool ("Idle", false);
 		}
 
-		if (Input.GetKey (KeyCode.D)) 
-		{
-			rendo.flipX = false;
-
-		} else if (Input.GetKey (KeyCode.A)) 
-		{
-			rendo.flipX = true;
-		}
-
 		if (hitPoints <= 0) 
 		{
 			hitPoints = 0;
 		}
 
-		if (Input.GetKeyDown (KeyCode.E)) 
+		/*if (Input.GetKeyDown (KeyCode.E) && ) 
 		{
 			maattori.SetTrigger ("FastAttack");
 			attacked = true;
+		}*/
+
+		while (Input.GetKeyDown (KeyCode.E)) 
+		{
+			atkTimer += 1 * Time.deltaTime;
+			print (atkTimer);
 		}
 	}
 
@@ -69,13 +76,13 @@ public class Player : MonoBehaviour
 		attacked = false;
 	}
 
-	IEnumerator OnTriggerStay (Collider other)
+	/*IEnumerator OnTriggerStay (Collider other)
 	{
 		if (Input.GetKeyDown (KeyCode.E) && attacked == false) 
 		{
 			yield return new WaitForSeconds (0.25f);
 			Destroy (other.gameObject);
 		}
-	}
+	}*/
 
 }
