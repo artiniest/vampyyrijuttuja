@@ -85,6 +85,11 @@ public class Player : MonoBehaviour
 			atkTimer = 0;
 		}
 
+		if (shadowReady == false)
+		{
+			StartCoroutine(GoInto());
+		}
+
 		if (Input.GetKey (KeyCode.S) && shadowReady == true)
 		{
 			StartCoroutine (ComeOut());
@@ -99,12 +104,9 @@ public class Player : MonoBehaviour
 
 	IEnumerator GoInto ()
 	{
-		if (shadowReady == false)
-		{
 			yield return new WaitForSeconds (powerWaitTime);
 			print ("power ready");
 			shadowReady = true;
-		}
 	}
 
 	IEnumerator ComeOut()
