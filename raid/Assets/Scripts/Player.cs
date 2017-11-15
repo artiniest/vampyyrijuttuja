@@ -58,22 +58,30 @@ public class Player : MonoBehaviour
 			hitPoints = 0;
 		}
 
-		/*if (Input.GetKeyDown (KeyCode.E) && ) 
+		if (Input.GetKey (KeyCode.E)) {
+			maattori.SetBool ("ReadyAtk", true);
+			atkTimer += 2 * Time.deltaTime;
+		} 
+
+		else if (atkTimer > 1 && Input.GetKeyUp (KeyCode.E)) 
+		{
+			maattori.SetTrigger ("HeavyAttack");
+			attacked = true;
+			atkTimer = 0;
+		} 
+
+		else if (atkTimer < 1 && Input.GetKeyUp (KeyCode.E)) 
 		{
 			maattori.SetTrigger ("FastAttack");
 			attacked = true;
-		}*/
-
-		while (Input.GetKeyDown (KeyCode.E)) 
-		{
-			atkTimer += 1 * Time.deltaTime;
-			print (atkTimer);
+			atkTimer = 0;
 		}
 	}
 
 	public void CancelAttack()
 	{
 		attacked = false;
+		maattori.SetBool ("ReadyAtk", false);
 	}
 
 	/*IEnumerator OnTriggerStay (Collider other)
