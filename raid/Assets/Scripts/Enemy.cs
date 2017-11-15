@@ -22,6 +22,11 @@ public class Enemy : MonoBehaviour
 
 	void Update ()
 	{
+		if (Vector2.Distance (transform.position, player.transform.position) >= minDistance) 
+		{
+			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.05f);
+		}
+
 		if (player.transform.position.x >= gameObject.transform.position.x) 
 		{
 			rend.flipX = true;
@@ -33,11 +38,9 @@ public class Enemy : MonoBehaviour
 
 	protected void MoveTowards()
 	{
-		if (Vector2.Distance (transform.position, player.transform.position) >= minDistance) 
+		/*if (Vector2.Distance (transform.position, player.transform.position) >= minDistance) 
 		{
 			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.5f);
-		}
-
-
+		}*/
 	}
 }
