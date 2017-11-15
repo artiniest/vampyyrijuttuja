@@ -134,7 +134,7 @@ public class Player : MonoBehaviour
 
 		if (isShadow == true)
 		{
-			Physics.IgnoreCollision(other, gameObject.GetComponent<Collider>();
+			Physics.IgnoreCollision(other, gameObject.GetComponent<Collider>());
 		}
 	}
 
