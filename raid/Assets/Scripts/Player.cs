@@ -13,8 +13,11 @@ public class Player : MonoBehaviour
 	private Vector2 moveDirection = Vector2.zero;
 	public float moveSpeed = 10f;
 	public float gravity = 20f;
+	public float powerWaitTime = 2;
+	public float shadowTime = 2f;
 
 	public static bool attacked = false;
+	bool shadowReady = false;
 	float atkTimer = 0f;
 
 	void Start ()
@@ -22,6 +25,8 @@ public class Player : MonoBehaviour
 		controller = GetComponent<CharacterController> ();
 		rendo = GetComponent<SpriteRenderer> ();
 		maattori = GetComponent<Animator> ();
+
+		StartCoroutine(GoInto());
 	}
 
 	void Update ()
@@ -76,12 +81,39 @@ public class Player : MonoBehaviour
 			attacked = true;
 			atkTimer = 0;
 		}
+
+		if (Input.GetKey (KeyCode.S) && shadowReady == true)
+		{
+			StartCoroutine (ComeOut());
+		}
 	}
 
 	public void CancelAttack()
 	{
 		attacked = false;
 		maattori.SetBool ("ReadyAtk", false);
+	}
+
+	IEnumerator GoInto ()
+	{
+		if (shadowReady == false)
+		{
+			yield return new WaitForSeconds (powerWaitTime);
+			print ("power ready");
+			shadowReady = true;
+		}
+	}
+
+	IEnumerator ComeOut()
+	{
+		if (shadowReady == true)
+		{
+			maattori.SetBool ("Shadow", true);
+			yield return new WaitForSeconds (shadowTime);
+			print ("power used");
+			maattori.SetBool ("Shadow", false);
+			shadowReady = false;
+		}
 	}
 
 	/*IEnumerator OnTriggerStay (Collider other)
