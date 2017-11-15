@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
 	public static bool attacked = false;
 	bool powerReady = false;
-	bool isShadow = false;
+	public static bool isShadow = false;
 	float atkTimer = 0f;
 
 	void Start ()
@@ -117,25 +117,31 @@ public class Player : MonoBehaviour
 			maattori.SetBool ("Shadow", true);
 			GetComponent<BoxCollider>().enabled = false;
 			isShadow = true;
+
 			yield return new WaitForSeconds (shadowTime);
 			print ("power used");
 			maattori.SetBool ("Shadow", false);
 			powerReady = false;
+			isShadow = false;
 		}
 	}
 
 	IEnumerator OnTriggerStay (Collider other)
 	{
-		if (Input.GetKeyDown (KeyCode.E) && attacked == false) 
+		if (Input.GetKeyUp (KeyCode.E) && attacked == false) 
 		{
-			yield return new WaitForSeconds (0.25f);
+			yield return new WaitForSeconds (0.5f);
 			Destroy (other.gameObject);
-		}
+   		}
 
 		if (isShadow == true)
 		{
-			Physics.IgnoreCollision(other, gameObject.GetComponent<Collider>());
+			Physics.IgnoreCollision(other.GetComponent<BoxCollider>(), controller, ignore: true);
+		}
+
+		if (isShadow = false)
+		{
+			Physics.IgnoreCollision(other.GetComponent<BoxCollider>(), controller, ignore: false);
 		}
 	}
-
 }

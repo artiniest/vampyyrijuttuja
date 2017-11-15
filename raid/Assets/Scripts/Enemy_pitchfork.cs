@@ -20,6 +20,7 @@ public class Enemy_pitchfork : Enemy
 		if (Vector2.Distance (transform.position, player.transform.position) <= minDistance)//&&playerdodges) 
 		{
 			Player.hitPoints -= dmg;
+			mator.SetTrigger("Attack");
 		}
 	}
 }
