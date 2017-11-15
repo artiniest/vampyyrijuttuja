@@ -50,7 +50,10 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		hpDisplay.text = hitPoints.ToString();
+		if (hpDisplay != null)
+		{
+			hpDisplay.text = hitPoints.ToString();
+		}
 
 		if (moveDirection.x == 0) {
 			maattori.SetBool ("Idle", true);
