@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
 	{
 			yield return new WaitForSeconds (powerWaitTime);
 			print ("power ready");
-			shadowReady = true;
+			powerReady = true;
 	}
 
 	IEnumerator ComeOut()
