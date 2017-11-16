@@ -41,12 +41,4 @@ public class Enemy : MonoBehaviour
 			rend.flipX = false;
 		}
 	}
-
-	protected void MoveTowards()
-	{
-		/*if (Vector2.Distance (transform.position, player.transform.position) >= minDistance) 
-		{
-			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.5f);
-		}*/
-	}
 }

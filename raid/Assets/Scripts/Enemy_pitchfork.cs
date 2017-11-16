@@ -11,7 +11,6 @@ public class Enemy_pitchfork : Enemy
 		atkRate = 3;
 		moveRate = 0.01f;
 
-		InvokeRepeating ("MoveTowards", 3f, moveRate);
 		InvokeRepeating ("Attack", 0, atkRate);
 	}
 

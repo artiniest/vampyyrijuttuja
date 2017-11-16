@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 	public static bool attacked = false;
 	bool powerReady = false;
 	public static bool isShadow = false;
+	bool canMove = true;
 	float atkTimer = 0f;
 
 	GameObject[] enemies;
@@ -49,7 +50,7 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		if (attacked == false) 
+		if (canMove == true) 
 		{
 			moveDirection = new Vector2 (Input.GetAxis ("Horizontal"), 0);
 			moveDirection = transform.TransformDirection (moveDirection);
@@ -120,6 +121,11 @@ public class Player : MonoBehaviour
 		maattori.SetBool ("ReadyAtk", false);
 	}
 
+	public void RegainControl ()
+	{
+		canMove = true;
+	}
+
 	IEnumerator GoInto ()
 	{
 			yield return new WaitForSeconds (powerWaitTime);
@@ -133,10 +139,10 @@ public class Player : MonoBehaviour
 		{
 			maattori.SetBool ("Shadow", true);
 			GetComponent<BoxCollider>().enabled = false;
+			canMove = false;
 			isShadow = true;
 
 			yield return new WaitForSeconds (shadowTime);
-			print ("power used");
 			maattori.SetBool ("Shadow", false);
 			powerReady = false;
 			isShadow = false;
