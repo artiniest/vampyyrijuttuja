@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 	public static bool isShadow = false;
 	float atkTimer = 0f;
 
+	GameObject[] enemies;
+
 	void Start ()
 	{
 		controller = GetComponent<CharacterController> ();
@@ -32,6 +34,21 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
+		enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+		foreach (GameObject enemy in enemies)
+		{
+			if (isShadow == true)
+			{
+				Physics.IgnoreCollision (enemy.GetComponent<BoxCollider>(), controller, ignore: true);
+			}
+
+			else if (isShadow == false)
+			{
+				Physics.IgnoreCollision (enemy.GetComponent<BoxCollider>(), controller, ignore: false);
+			}
+		}
+
 		if (attacked == false) 
 		{
 			moveDirection = new Vector2 (Input.GetAxis ("Horizontal"), 0);
@@ -128,20 +145,10 @@ public class Player : MonoBehaviour
 
 	IEnumerator OnTriggerStay (Collider other)
 	{
-		if (Input.GetKeyUp (KeyCode.E) && attacked == false) 
+		if (Input.GetKeyUp (KeyCode.E) && attacked == false && other.tag != "Player") 
 		{
 			yield return new WaitForSeconds (0.5f);
 			Destroy (other.gameObject);
    		}
-
-		if (isShadow == true)
-		{
-			Physics.IgnoreCollision(other.GetComponent<BoxCollider>(), controller, ignore: true);
-		}
-
-		if (isShadow = false)
-		{
-			Physics.IgnoreCollision(other.GetComponent<BoxCollider>(), controller, ignore: false);
-		}
 	}
 }
