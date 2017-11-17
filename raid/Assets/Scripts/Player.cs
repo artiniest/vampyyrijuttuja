@@ -7,10 +7,6 @@ public class Player : MonoBehaviour
 {
 	public Text hpDisplay;
 	public Text scoreDisplay;
-	CharacterController controller;
-	SpriteRenderer rendo;
-	Animator maattori;
-	private Vector2 moveDirection = Vector2.zero;
 	public float moveSpeed = 10f;
 	public float gravity = 20f;
 	public float powerWaitTime = 2;
@@ -19,13 +15,17 @@ public class Player : MonoBehaviour
 	public static int hitPoints = 100;
 
 	public static bool attacked = false;
-	bool powerReady = false;
 	public static bool isShadow = false;
-	bool canMove = true;
-	float atkTimer = 0f;
-	int killScore = 0;
 
+	Animator maattori;
+	bool powerReady = false;
+	bool canMove = true;
+	CharacterController controller;
+	float atkTimer = 0f;
 	GameObject[] enemies;
+	int killScore = 0;
+	private Vector2 moveDirection = Vector2.zero;
+	SpriteRenderer rendo;
 
 	void Start ()
 	{
