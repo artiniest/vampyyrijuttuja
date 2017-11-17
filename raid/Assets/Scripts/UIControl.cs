@@ -22,17 +22,17 @@ public class UIControl : MonoBehaviour
 	{
 		textext.text = str;
 
-		if (nextLine +1 == 4 && Player_tutorial.allowedToWalk == false)
+		if (nextLine +1 == 4 && Player_tutorial.allowedToWalk == false && Player_tutorial.allowedToShadow == false)
 		{
 			Player_tutorial.allowedToWalk = true;
-			StartCoroutine(Load());
+			//StartCoroutine(Load());
 		}
 
 		else if (nextLine +1 == 5 && Player_tutorial.allowedToShadow == false)
 		{
 			Player_tutorial.allowedToWalk = true;
 			Player_tutorial.allowedToShadow = true;
-			StartCoroutine(Load());
+			//StartCoroutine(Load());
 		}
 
 	}
