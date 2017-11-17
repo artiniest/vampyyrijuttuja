@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f13a9c46b68f1405db67b79509b79969
-timeCreated: 1510830488
+timeCreated: 1510904399
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -82,12 +82,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 14
         y: 0
-        width: 55
+        width: 60
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -95,12 +95,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 94
+        x: 88
         y: 1
-        width: 59
+        width: 65
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -108,12 +108,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 174
+        x: 170
         y: 0
-        width: 65
+        width: 69
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -121,12 +121,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 262
+        x: 256
         y: 1
-        width: 58
+        width: 64
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -134,12 +134,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 342
+        x: 335
         y: 0
-        width: 49
+        width: 56
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -147,12 +147,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 423
+        x: 418
         y: 0
-        width: 51
+        width: 56
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -160,12 +160,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 500
+        x: 495
         y: 1
-        width: 49
+        width: 54
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -173,12 +173,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 572
+        x: 565
         y: 1
-        width: 50
+        width: 57
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -186,12 +186,12 @@ TextureImporter:
       name: Enemy_TorchMale_Run_SpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 643
+        x: 637
         y: 0
-        width: 41
+        width: 47
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

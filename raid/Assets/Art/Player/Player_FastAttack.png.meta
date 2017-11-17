@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 459f543b565184854abda72c569a24e2
-timeCreated: 1510657321
+timeCreated: 1510908476
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -95,10 +95,10 @@ TextureImporter:
         serializedVersion: 2
         x: 77
         y: 0
-        width: 64
+        width: 81
         height: 76
       alignment: 9
-      pivot: {x: 0.33779693, y: 0.27576268}
+      pivot: {x: 0.33779693, y: 0.2622634}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -108,10 +108,10 @@ TextureImporter:
         serializedVersion: 2
         x: 164
         y: 0
-        width: 64
+        width: 81
         height: 76
       alignment: 9
-      pivot: {x: 0.32711005, y: 0.26676315}
+      pivot: {x: 0.32711005, y: 0.2622634}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -119,12 +119,12 @@ TextureImporter:
       name: Player_FastAttack_3
       rect:
         serializedVersion: 2
-        x: 252
+        x: 268
         y: 0
-        width: 63
+        width: 81
         height: 76
       alignment: 9
-      pivot: {x: 0.3233783, y: 0.25776362}
+      pivot: {x: 0.3233783, y: 0.2622634}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -132,9 +132,9 @@ TextureImporter:
       name: Player_FastAttack_4
       rect:
         serializedVersion: 2
-        x: 332
+        x: 376
         y: 0
-        width: 63
+        width: 80
         height: 76
       alignment: 9
       pivot: {x: 0.3233783, y: 0.2622634}
@@ -145,9 +145,9 @@ TextureImporter:
       name: Player_FastAttack_5
       rect:
         serializedVersion: 2
-        x: 411
+        x: 471
         y: 0
-        width: 58
+        width: 59
         height: 76
       alignment: 9
       pivot: {x: 0.30868426, y: 0.2622634}
@@ -158,9 +158,9 @@ TextureImporter:
       name: Player_FastAttack_6
       rect:
         serializedVersion: 2
-        x: 481
+        x: 541
         y: 0
-        width: 56
+        width: 57
         height: 76
       alignment: 9
       pivot: {x: 0.29352298, y: 0.2622634}
