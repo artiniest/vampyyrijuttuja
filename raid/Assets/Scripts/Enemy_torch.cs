@@ -18,6 +18,7 @@ public class Enemy_torch : Enemy
 	{
 		if (Vector2.Distance (transform.position, player.transform.position) <= minDistance)//&&playerdodges) 
 		{
+			CameraShake.shakeDuration = 0.25f;
 			Player.hitPoints -= dmg;
 		}
 	}

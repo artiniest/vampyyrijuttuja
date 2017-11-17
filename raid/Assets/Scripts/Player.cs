@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour 
 {
-	public static int hitPoints = 100;
 	public Text hpDisplay;
+	public Text scoreDisplay;
 	CharacterController controller;
 	SpriteRenderer rendo;
 	Animator maattori;
@@ -15,12 +15,15 @@ public class Player : MonoBehaviour
 	public float gravity = 20f;
 	public float powerWaitTime = 2;
 	public float shadowTime = 2f;
+	public float minEnemyDistance = 1.5f;
+	public static int hitPoints = 100;
 
 	public static bool attacked = false;
 	bool powerReady = false;
 	public static bool isShadow = false;
 	bool canMove = true;
 	float atkTimer = 0f;
+	int killScore = 0;
 
 	GameObject[] enemies;
 
@@ -74,6 +77,11 @@ public class Player : MonoBehaviour
 			hpDisplay.text = hitPoints.ToString();
 		}
 
+		if (scoreDisplay != null)
+		{
+			scoreDisplay.text = killScore.ToString();
+		}
+
 		if (moveDirection.x == 0) {
 			maattori.SetBool ("Idle", true);
 		} else {
@@ -93,6 +101,7 @@ public class Player : MonoBehaviour
 		else if (atkTimer > 1 && Input.GetKeyUp (KeyCode.E)) 
 		{
 			maattori.SetTrigger ("HeavyAttack");
+			minEnemyDistance = 4;
 			attacked = true;
 			atkTimer = 0;
 		} 
@@ -138,7 +147,6 @@ public class Player : MonoBehaviour
 		if (powerReady == true)
 		{
 			maattori.SetBool ("Shadow", true);
-			GetComponent<BoxCollider>().enabled = false;
 			canMove = false;
 			isShadow = true;
 
@@ -153,8 +161,12 @@ public class Player : MonoBehaviour
 	{
 		if (Input.GetKeyUp (KeyCode.E) && attacked == false && other.tag != "Player") 
 		{
-			yield return new WaitForSeconds (0.5f);
-			Destroy (other.gameObject);
+			if (Vector2.Distance (transform.position, other.transform.position) <= minEnemyDistance)
+			{
+				yield return new WaitForSeconds (0.25f);
+				Destroy (other.gameObject);
+				killScore ++;
+			}
    		}
 	}
 }
