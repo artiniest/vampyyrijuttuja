@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-guid: 459f543b565184854abda72c569a24e2
-timeCreated: 1510908476
+guid: a67e5a99de5a14c528e3072a680c45dd
+timeCreated: 1510912312
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player_FastAttack_0
-    21300002: Player_FastAttack_1
-    21300004: Player_FastAttack_2
-    21300006: Player_FastAttack_3
-    21300008: Player_FastAttack_4
-    21300010: Player_FastAttack_5
-    21300012: Player_FastAttack_6
+    21300000: Player_HeavyAttack_Shockwave_0
+    21300002: Player_HeavyAttack_Shockwave_1
+    21300004: Player_HeavyAttack_Shockwave_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -77,93 +73,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_FastAttack_0
+      name: Player_HeavyAttack_Shockwave_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 15
         y: 0
-        width: 46
-        height: 76
-      alignment: 9
-      pivot: {x: 0.5622228, y: 0.2622634}
+        width: 116
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_1
+      name: Player_HeavyAttack_Shockwave_1
       rect:
         serializedVersion: 2
-        x: 77
+        x: 168
         y: 0
-        width: 81
-        height: 76
-      alignment: 9
-      pivot: {x: 0.33779693, y: 0.2622634}
+        width: 116
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_2
+      name: Player_HeavyAttack_Shockwave_2
       rect:
         serializedVersion: 2
-        x: 164
+        x: 323
         y: 0
-        width: 81
-        height: 76
-      alignment: 9
-      pivot: {x: 0.32711005, y: 0.2622634}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Player_FastAttack_3
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 0
-        width: 81
-        height: 76
-      alignment: 9
-      pivot: {x: 0.3233783, y: 0.2622634}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Player_FastAttack_4
-      rect:
-        serializedVersion: 2
-        x: 376
-        y: 0
-        width: 80
-        height: 76
-      alignment: 9
-      pivot: {x: 0.3233783, y: 0.2622634}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Player_FastAttack_5
-      rect:
-        serializedVersion: 2
-        x: 471
-        y: 0
-        width: 59
-        height: 76
-      alignment: 9
-      pivot: {x: 0.30868426, y: 0.2622634}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Player_FastAttack_6
-      rect:
-        serializedVersion: 2
-        x: 541
-        y: 0
-        width: 57
-        height: 76
-      alignment: 9
-      pivot: {x: 0.29352298, y: 0.2622634}
+        width: 116
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

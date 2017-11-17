@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: 459f543b565184854abda72c569a24e2
-timeCreated: 1510908476
+guid: f13a9c46b68f1405db67b79509b79969
+timeCreated: 1510904399
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player_FastAttack_0
-    21300002: Player_FastAttack_1
-    21300004: Player_FastAttack_2
-    21300006: Player_FastAttack_3
-    21300008: Player_FastAttack_4
-    21300010: Player_FastAttack_5
-    21300012: Player_FastAttack_6
+    21300000: Enemy_TorchMale_Run_SpriteSheet_0
+    21300002: Enemy_TorchMale_Run_SpriteSheet_1
+    21300004: Enemy_TorchMale_Run_SpriteSheet_2
+    21300006: Enemy_TorchMale_Run_SpriteSheet_3
+    21300008: Enemy_TorchMale_Run_SpriteSheet_4
+    21300010: Enemy_TorchMale_Run_SpriteSheet_5
+    21300012: Enemy_TorchMale_Run_SpriteSheet_6
+    21300014: Enemy_TorchMale_Run_SpriteSheet_7
+    21300016: Enemy_TorchMale_Run_SpriteSheet_8
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -77,93 +79,119 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_FastAttack_0
+      name: Enemy_TorchMale_Run_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 14
         y: 0
-        width: 46
-        height: 76
-      alignment: 9
-      pivot: {x: 0.5622228, y: 0.2622634}
+        width: 60
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_1
+      name: Enemy_TorchMale_Run_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 0
-        width: 81
-        height: 76
-      alignment: 9
-      pivot: {x: 0.33779693, y: 0.2622634}
+        x: 88
+        y: 1
+        width: 65
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_2
+      name: Enemy_TorchMale_Run_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 164
+        x: 170
         y: 0
-        width: 81
-        height: 76
-      alignment: 9
-      pivot: {x: 0.32711005, y: 0.2622634}
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_3
+      name: Enemy_TorchMale_Run_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 268
-        y: 0
-        width: 81
-        height: 76
-      alignment: 9
-      pivot: {x: 0.3233783, y: 0.2622634}
+        x: 256
+        y: 1
+        width: 64
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_4
+      name: Enemy_TorchMale_Run_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 376
+        x: 335
         y: 0
-        width: 80
-        height: 76
-      alignment: 9
-      pivot: {x: 0.3233783, y: 0.2622634}
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_5
+      name: Enemy_TorchMale_Run_SpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 471
+        x: 418
         y: 0
-        width: 59
-        height: 76
-      alignment: 9
-      pivot: {x: 0.30868426, y: 0.2622634}
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Player_FastAttack_6
+      name: Enemy_TorchMale_Run_SpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 541
-        y: 0
+        x: 495
+        y: 1
+        width: 54
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Enemy_TorchMale_Run_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1
         width: 57
-        height: 76
-      alignment: 9
-      pivot: {x: 0.29352298, y: 0.2622634}
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Enemy_TorchMale_Run_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 0
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
