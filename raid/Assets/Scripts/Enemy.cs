@@ -8,11 +8,12 @@ public class Enemy : MonoBehaviour
 	protected int dmg;
 	protected int atkRate;
 	protected float moveRate;
-	protected float minDistance = 2f;
+	protected float minDistance = 1.2f;
 
 	protected GameObject player;
 	protected Animator mator;
 	protected SpriteRenderer rend;
+
 
 	protected void Start ()
 	{
@@ -23,14 +24,22 @@ public class Enemy : MonoBehaviour
 
 	void Update ()
 	{
-		if (Vector2.Distance (transform.position, player.transform.position) >= minDistance && Player.isShadow == false) 
+		RaycastHit hit;
+
+		if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit))
 		{
-			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.05f);
-			mator.SetBool ("seesPlayer", true);
-		} else if (Player.isShadow == true){
-			mator.SetBool ("seesPlayer", false);
-		} else if (Vector2.Distance (transform.position, player.transform.position) <= minDistance){
-			mator.SetBool ("seesPlayer", false);
+			if (Vector2.Distance (player.transform.position, transform.position) >= minDistance && Player.isShadow == false)
+			//if (hit.collider.tag == "Player" && hit.distance >= minDistance && Player.isShadow == false)
+			{
+				if (hit.distance >= 1.2)
+				{
+					transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.05f);
+					mator.SetBool ("seesPlayer", true);
+				} else if (hit.distance <= 1.2)
+				{
+					mator.SetBool ("seesPlayer", false);
+				}
+			}
 		}
 
 		if (player.transform.position.x >= gameObject.transform.position.x) 
