@@ -16,7 +16,7 @@ public class Enemy_pitchfork : Enemy
 
 	void Attack()
 	{
-		if (Vector2.Distance (transform.position, player.transform.position) <= minDistance)//&&playerdodges) 
+		if (Vector2.Distance (transform.position, player.transform.position) <= 1.5)//&&playerdodges) 
 		{
 			CameraShake.shakeDuration = 0.25f;
 			Player.hitPoints -= dmg;
