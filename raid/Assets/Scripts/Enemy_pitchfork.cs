@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Enemy_pitchfork : Enemy 
 {
-	void Start ()
+	public override void Start ()
 	{
 		base.Start ();
-		dmg = 30;
+		dmg = 20;
 		atkRate = 3;
 		moveRate = 0.01f;
 
@@ -18,8 +18,7 @@ public class Enemy_pitchfork : Enemy
 	{
 		if (Vector2.Distance (transform.position, player.transform.position) <= 1.5)//&&playerdodges) 
 		{
-			CameraShake.shakeDuration = 0.25f;
-			Player.hitPoints -= dmg;
+			Player2.hitPoints -= dmg;
 			mator.SetTrigger("Attack");
 		}
 	}

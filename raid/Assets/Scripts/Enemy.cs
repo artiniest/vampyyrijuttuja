@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 	protected SpriteRenderer rend;
 
 
-	protected void Start ()
+	public virtual void Start ()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		rend = GetComponent<SpriteRenderer> ();
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
 		if (Physics.Raycast (transform.position, player.transform.position - transform.position, out hit))
 		{
-			if (Vector2.Distance (player.transform.position, transform.position) >= minDistance && Player.isShadow == false)
+			if (Vector2.Distance (player.transform.position, transform.position) >= minDistance && Player2.inShadows == false)
 			//if (hit.collider.tag == "Player" && hit.distance >= minDistance && Player.isShadow == false)
 			{
 				if (hit.distance >= 1.2)

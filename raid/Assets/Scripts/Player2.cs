@@ -22,12 +22,11 @@ public class Player2 : MonoBehaviour
 	public float shadowWaitTime = 2f;
 	public float shadowTime = 2f;
 	bool shadowReady = false;
-	bool inShadows = false;
+	public static bool inShadows = false;
 	GameObject[] enemies;
 
 	//Attacking things
 	public static int hitPoints = 100;
-	float minEnemyDistance = 1.1f;
 	float atkTimer = 0f;
 
 	//Varjo
@@ -94,7 +93,6 @@ public class Player2 : MonoBehaviour
 		{
 			canMove = false;
 			maattori.SetTrigger("HeavyAttack");
-			minEnemyDistance = 3f;
 			atkTimer = 0;
 
 			if (rendo.flipX == false)
@@ -150,7 +148,7 @@ public class Player2 : MonoBehaviour
 
 	IEnumerator OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Enemy")
+		if (other.tag == "Enemy" && inShadows == false)
 		{
 			yield return new WaitForSeconds (0.5f);
 			Destroy (other.gameObject);

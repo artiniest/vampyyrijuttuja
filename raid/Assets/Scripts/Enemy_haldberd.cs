@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_torch : Enemy 
+public class Enemy_haldberd : Enemy
 {
 	public override void Start ()
 	{
 		base.Start ();
-		dmg = 10;
-		atkRate = 1;
-		moveRate = 0.25f;
+		dmg = 30;
+		atkRate = 4;
+		moveRate = 0.02f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
 	}
