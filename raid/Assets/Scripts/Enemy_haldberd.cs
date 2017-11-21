@@ -7,7 +7,7 @@ public class Enemy_haldberd : Enemy
 	public override void Start ()
 	{
 		base.Start ();
-		dmg = 30;
+		dmg = 0.30f;
 		atkRate = 4;
 		moveRate = 0.02f;
 

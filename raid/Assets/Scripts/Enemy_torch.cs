@@ -7,7 +7,7 @@ public class Enemy_torch : Enemy
 	public override void Start ()
 	{
 		base.Start ();
-		dmg = 10;
+		dmg = 0.10f;
 		atkRate = 1;
 		moveRate = 0.25f;
 

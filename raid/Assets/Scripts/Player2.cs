@@ -11,6 +11,7 @@ public class Player2 : MonoBehaviour
 	public SpriteRenderer rendo;
 	public GameObject Rune;
 	public BoxCollider wpnColl;
+	public GameObject healthBar;
 
 	//Moving stuffs
 	bool canMove = true;
@@ -26,7 +27,7 @@ public class Player2 : MonoBehaviour
 	GameObject[] enemies;
 
 	//Attacking things
-	public static int hitPoints = 100;
+	public static float hitPoints = 1f;
 	float atkTimer = 0f;
 
 	//Varjo
@@ -35,6 +36,13 @@ public class Player2 : MonoBehaviour
 
 	void Update ()
 	{
+		healthBar.transform.localScale = new Vector2 (hitPoints, healthBar.transform.localScale.y);
+
+		if (healthBar.transform.localScale.x <= 0)
+		{
+			healthBar.transform.localScale = new Vector2 (0, healthBar.transform.localScale.y);
+		}
+
 		//Movement things
 		if (canMove == true)
 		{

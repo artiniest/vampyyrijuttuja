@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour 
 {
-	protected int dmg;
+	protected float dmg;
 	protected int atkRate;
 	protected float moveRate;
 	protected float minDistance = 1.2f;
