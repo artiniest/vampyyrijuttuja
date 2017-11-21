@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 	public float gravity = 20f;
 	public float powerWaitTime = 2;
 	public float shadowTime = 2f;
-	public float minEnemyDistance = 1.5f;
+	public float minEnemyDistance = 1.1f;
 	public static int hitPoints = 100;
 
 	public static bool attacked = false;
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 	int killScore = 0;
 	private Vector2 moveDirection = Vector2.zero;
 	SpriteRenderer rendo;
+	RaycastHit hit;
 
 	void Start ()
 	{
@@ -64,10 +65,18 @@ public class Player : MonoBehaviour
 
 			if (Input.GetKey (KeyCode.D)) 
 			{
+				if (Physics.Raycast(transform.position, Vector2.right, out hit))
+				{
+					print (hit.collider.name);
+				}
 				rendo.flipX = false;
 
 			} else if (Input.GetKey (KeyCode.A)) 
 			{
+				if (Physics.Raycast(transform.position, Vector2.left, out hit))
+				{
+					print (hit.collider.name);
+				}
 				rendo.flipX = true;
 			}
 		}
@@ -122,6 +131,22 @@ public class Player : MonoBehaviour
 		{
 			StartCoroutine (ComeOut());
 		}
+
+		if (Input.GetKeyUp (KeyCode.E)) 
+		{
+			StartCoroutine(Kill());
+		}
+	}
+
+	IEnumerator Kill ()
+	{
+		print ("kill");
+		if (Vector2.Distance (transform.position, hit.collider.transform.position) <= minEnemyDistance)
+		{
+			yield return new WaitForSeconds (0.25f);
+			Destroy (hit.collider.gameObject);
+			killScore ++;
+		}
 	}
 
 	public void CancelAttack()
@@ -155,18 +180,5 @@ public class Player : MonoBehaviour
 			powerReady = false;
 			isShadow = false;
 		}
-	}
-
-	IEnumerator OnTriggerStay (Collider other)
-	{
-		if (Input.GetKeyUp (KeyCode.E) && attacked == false && other.tag != "Player") 
-		{
-			if (Vector2.Distance (transform.position, other.transform.position) <= minEnemyDistance)
-			{
-				yield return new WaitForSeconds (0.25f);
-				Destroy (other.gameObject);
-				killScore ++;
-			}
-   		}
 	}
 }
