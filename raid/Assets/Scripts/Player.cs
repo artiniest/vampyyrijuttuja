@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
 	public Text hpDisplay;
 	public Text scoreDisplay;
+	public GameObject ShadowRune;
 	public float moveSpeed = 10f;
 	public float gravity = 20f;
 	public float powerWaitTime = 2;
@@ -39,6 +40,16 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
+		if (powerReady == false)
+		{
+			ShadowRune.GetComponent<Animator>().SetBool("isLit", false);
+		}
+
+		else if (powerReady == true)
+		{
+			ShadowRune.GetComponent<Animator>().SetBool("isLit", true);
+		}
+
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
 		foreach (GameObject enemy in enemies)
@@ -67,6 +78,7 @@ public class Player : MonoBehaviour
 			{
 				if (Physics.Raycast(transform.position, Vector2.right, out hit))
 				{
+					Debug.DrawRay(transform.position, Vector2.right, Color.white, 1);
 					print (hit.collider.name);
 				}
 				rendo.flipX = false;
@@ -75,6 +87,7 @@ public class Player : MonoBehaviour
 			{
 				if (Physics.Raycast(transform.position, Vector2.left, out hit))
 				{
+					Debug.DrawRay(transform.position, Vector2.left, Color.white, 1);
 					print (hit.collider.name);
 				}
 				rendo.flipX = true;
@@ -132,7 +145,7 @@ public class Player : MonoBehaviour
 			StartCoroutine (ComeOut());
 		}
 
-		if (Input.GetKeyUp (KeyCode.E)) 
+//		if (Physics.Raycast(transform.position, Vector2.right) || Physics.Raycast(transform.position, Vector2.left) && Input.GetKeyDo (KeyCode.E)) 
 		{
 			StartCoroutine(Kill());
 		}
@@ -140,11 +153,10 @@ public class Player : MonoBehaviour
 
 	IEnumerator Kill ()
 	{
-		print ("kill");
-		if (Vector2.Distance (transform.position, hit.collider.transform.position) <= minEnemyDistance)
+		if (Physics.Raycast(transform.position, Vector2.right) || Physics.Raycast(transform.position, Vector2.left) && Vector2.Distance (transform.position, hit.collider.transform.position) <= minEnemyDistance)
 		{
-			yield return new WaitForSeconds (0.25f);
-			Destroy (hit.collider.gameObject);
+			yield return new WaitForSeconds (0.5f);
+			hit.collider.gameObject.SetActive(false);
 			killScore ++;
 		}
 	}
@@ -155,10 +167,10 @@ public class Player : MonoBehaviour
 		maattori.SetBool ("ReadyAtk", false);
 	}
 
-	public void RegainControl ()
+	/*public void RegainControl ()
 	{
 		canMove = true;
-	}
+	}*/
 
 	IEnumerator GoInto ()
 	{
