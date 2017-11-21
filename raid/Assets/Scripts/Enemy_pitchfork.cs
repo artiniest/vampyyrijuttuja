@@ -18,6 +18,7 @@ public class Enemy_pitchfork : Enemy
 	{
 		if (Vector2.Distance (transform.position, player.transform.position) <= 1.5)//&&playerdodges) 
 		{
+			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;
 			mator.SetTrigger("Attack");
 		}
