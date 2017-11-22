@@ -12,9 +12,13 @@ public class BackgroundScroll : MonoBehaviour
 	private int leftIndex;
 	private int rightIndex;
 
+	public float paralaxSpeed;
+	private float lastCameraX;
+
 	private void Start ()
 	{
 		cameraTr = Camera.main.transform;
+		lastCameraX = cameraTr.transform.position.x;
 		layers = new Transform[transform.childCount];
 		for (int i = 0; i < transform.childCount; i++)
 		{
@@ -27,6 +31,10 @@ public class BackgroundScroll : MonoBehaviour
 
 	private void Update()
 	{
+		float deltaX = cameraTr.position.x - lastCameraX;
+		transform.position += Vector3.right * (deltaX * paralaxSpeed);
+		lastCameraX = cameraTr.position.x;
+
 		if (cameraTr.position.x > (layers[rightIndex].transform.position.x - viewZone))
 		{
 			ScrollRight();
