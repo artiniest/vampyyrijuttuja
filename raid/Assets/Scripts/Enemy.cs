@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 	protected float dmg;
 	protected int atkRate;
 	protected float moveRate;
-	protected float minDistance = 1.2f;
+	protected float minDistance = 1.5f;
 
 	protected GameObject player;
 	protected Animator mator;
@@ -31,11 +31,12 @@ public class Enemy : MonoBehaviour
 			if (Vector2.Distance (player.transform.position, transform.position) >= minDistance && Player2.inShadows == false)
 			//if (hit.collider.tag == "Player" && hit.distance >= minDistance && Player.isShadow == false)
 			{
-				if (hit.distance >= 1.2)
+				if (hit.distance >= minDistance)
 				{
 					transform.position = Vector2.MoveTowards (transform.position, player.transform.position, 0.05f);
+					transform.position = new Vector3 (transform.position.x, transform.position.y, -9);
 					mator.SetBool ("seesPlayer", true);
-				} else if (hit.distance <= 1.2)
+				} else if (hit.distance <= minDistance)
 				{
 					mator.SetBool ("seesPlayer", false);
 				}

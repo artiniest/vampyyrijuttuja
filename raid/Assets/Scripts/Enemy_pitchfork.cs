@@ -7,7 +7,7 @@ public class Enemy_pitchfork : Enemy
 	public override void Start ()
 	{
 		base.Start ();
-		dmg = 20;
+		dmg = 0.20f;
 		atkRate = 3;
 		moveRate = 0.01f;
 
@@ -16,7 +16,7 @@ public class Enemy_pitchfork : Enemy
 
 	void Attack()
 	{
-		if (Vector2.Distance (transform.position, player.transform.position) <= 1.5)//&&playerdodges) 
+		if (Vector2.Distance (transform.position, player.transform.position) <= 1.5f)//&&playerdodges) 
 		{
 			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;
