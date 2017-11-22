@@ -16,7 +16,7 @@ public class Enemy_haldberd : Enemy
 
 	void Attack()
 	{
-		if (Vector2.Distance (transform.position, player.transform.position) <= 1.5f)//&&playerdodges) 
+		if (Vector2.Distance (transform.position, player.transform.position) <= 1.2f)//&&playerdodges) 
 		{
 			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;

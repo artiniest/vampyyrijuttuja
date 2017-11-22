@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 	protected float dmg;
 	protected int atkRate;
 	protected float moveRate;
-	protected float minDistance = 1.5f;
+	protected float minDistance = 1.2f;
 
 	protected GameObject player;
 	protected Animator mator;

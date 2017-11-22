@@ -41,7 +41,7 @@ public class BackgroundScroll : MonoBehaviour
 	private void ScrollLeft()
 	{
 		int lastRight = rightIndex;
-		layers[rightIndex].position = new Vector2(1, 0)* (layers[leftIndex].position.x - backGroundSize);
+		layers[rightIndex].position = Vector2.right * (layers[leftIndex].position.x - backGroundSize);
 		leftIndex = rightIndex;
 		rightIndex --;
 		if (rightIndex < 0)
@@ -51,7 +51,7 @@ public class BackgroundScroll : MonoBehaviour
 	private void ScrollRight ()
 	{
 		int lastLeft = leftIndex;
-		layers[leftIndex].position = new Vector2(1, 0) * (layers[rightIndex].position.x + backGroundSize);
+		layers[leftIndex].position = Vector2.right * (layers[rightIndex].position.x + backGroundSize);
 		rightIndex = leftIndex;
 		leftIndex ++;
 		if (leftIndex == layers.Length)
