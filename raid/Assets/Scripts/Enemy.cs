@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 	protected GameObject player;
 	protected Animator mator;
 	protected SpriteRenderer rend;
+	protected AudioSource enemyHit;
 
 
 	public virtual void Start ()
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag ("Player");
 		rend = GetComponent<SpriteRenderer> ();
 		mator = GetComponent<Animator>();
+		enemyHit = GetComponent<AudioSource>();
 	}
 
 	void Update ()

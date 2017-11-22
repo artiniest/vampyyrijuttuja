@@ -12,6 +12,8 @@ public class Player2 : MonoBehaviour
 	public GameObject Rune;
 	public BoxCollider wpnColl;
 	public GameObject healthBar;
+	public AudioSource sourssi;
+	public AudioSource enemyHit;
 
 	//Moving stuffs
 	bool canMove = true;
@@ -147,10 +149,12 @@ public class Player2 : MonoBehaviour
 		maattori.SetBool ("Shadow", true);
 		canMove = false;
 		inShadows = true;
+		moveSpeed = 0.2f;
 		yield return new WaitForSeconds (shadowTime);
 		maattori.SetBool("Shadow", false);
 		shadowReady = false;
 		inShadows = false;
+		moveSpeed = 0.1f;
 		Rune.GetComponent<Animator>().SetBool("isLit", false);
 	}
 
@@ -158,7 +162,9 @@ public class Player2 : MonoBehaviour
 	{
 		if (other.tag == "Enemy" && inShadows == false)
 		{
-			yield return new WaitForSeconds (0.5f);
+			yield return new WaitForSeconds (0.2f);
+			other.GetComponent<AudioSource>().Play();
+			yield return new WaitForSeconds (0.2f);
 			Destroy (other.gameObject);
 		}
 	}
@@ -173,5 +179,10 @@ public class Player2 : MonoBehaviour
 		canMove = true;
 		maattori.SetBool("ReadyAtk", false);
 		wpnColl.enabled = false;
+	}
+
+	public void PlaySound()
+	{
+		sourssi.Play();
 	}
 }
