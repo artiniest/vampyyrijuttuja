@@ -8,7 +8,7 @@ public class BackgroundScroll : MonoBehaviour
 
 	private Transform cameraTr;
 	private Transform[] layers;
-	private float viewZone = 1;
+	public float viewZone = 1;
 	private int leftIndex;
 	private int rightIndex;
 
