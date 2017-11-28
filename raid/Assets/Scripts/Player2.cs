@@ -57,10 +57,10 @@ public class Player2 : MonoBehaviour
 			moveDirection.y -= gravity * Time.deltaTime;
 			controller.Move (moveDirection);
 
-			if (Input.GetKeyDown(KeyCode.D))
+			if (moveDirection.x > 0)
 			{
 				rendo.flipX = false;
-			} else if (Input.GetKeyDown(KeyCode.A)){
+			} else if (moveDirection.x < 0){
 				rendo.flipX = true;
 			}
 
