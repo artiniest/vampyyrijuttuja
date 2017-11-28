@@ -8,7 +8,7 @@ public class Enemy_haldberd : Enemy
 	{
 		base.Start ();
 		dmg = 0.30f;
-		atkRate = 4;
+		atkRate = 2;
 		moveRate = 0.02f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
@@ -18,9 +18,15 @@ public class Enemy_haldberd : Enemy
 	{
 		if (player != null && Vector2.Distance (transform.position, player.transform.position) <= 1.5f && Player2.inShadows == false)//&&playerdodges) 
 		{
+			mator.SetTrigger("Attack");
 			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;
-			mator.SetTrigger("Attack");
+			GetComponent<AudioSource>().Play();
 		}
+	}
+
+	void PlaySound()
+	{
+		GetComponent<AudioSource>().Play();
 	}
 }

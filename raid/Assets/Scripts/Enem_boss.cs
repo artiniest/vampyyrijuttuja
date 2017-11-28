@@ -25,6 +25,12 @@ public class Enem_boss : Enemy
 			mator.SetTrigger("Attack");
 			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;
+			GetComponent<AudioSource>().Play();
 		}
+	}
+
+	void PlaySound()
+	{
+		GetComponent<AudioSource>().Play();
 	}
 }

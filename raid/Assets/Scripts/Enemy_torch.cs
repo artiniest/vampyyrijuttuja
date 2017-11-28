@@ -8,7 +8,7 @@ public class Enemy_torch : Enemy
 	{
 		base.Start ();
 		dmg = 0.10f;
-		atkRate = 1;
+		atkRate = 0.5f;
 		moveRate = 0.25f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
@@ -16,11 +16,18 @@ public class Enemy_torch : Enemy
 
 	void Attack()
 	{
-		if (player != null && Vector2.Distance (transform.position, player.transform.position) <= 1.5f && Player2.inShadows == false)//&&playerdodges) 
+		if (player != null && Vector2.Distance (transform.position, player.transform.position) <= 2.5f && Player2.inShadows == false)//&&playerdodges) 
 		{
+			mator.SetBool ("seesPlayer", false);
+			mator.SetTrigger("Attack");
 			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;
-			mator.SetTrigger("Attack");
+			GetComponent<AudioSource>().Play();
 		}
+	}
+
+	void PlaySound()
+	{
+		GetComponent<AudioSource>().Play();
 	}
 }
