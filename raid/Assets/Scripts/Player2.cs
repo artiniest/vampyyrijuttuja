@@ -84,6 +84,12 @@ public class Player2 : MonoBehaviour
 			StartCoroutine(Shadow());
 		}
 		enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+
+		if (enemies.Length == 0)
+		{
+			enemies = GameObject.FindGameObjectsWithTag ("EnemyBoss");
+		}
+
 		foreach (GameObject enemy in enemies)
 		{
 			if (inShadows == true)
@@ -169,6 +175,19 @@ public class Player2 : MonoBehaviour
 			other.GetComponent<AudioSource>().Play();
 			yield return new WaitForSeconds (0.2f);
 			Destroy (other.gameObject);
+		}
+
+		else if (other.tag == "EnemyBoss" && inShadows == false)
+		{
+			yield return new WaitForSeconds (0.2f);
+			other.GetComponent<AudioSource>().Play();
+			yield return new WaitForSeconds (0.2f);
+			Enem_boss.hitPoints -=10;
+
+			if (Enem_boss.hitPoints < 1)
+			{
+				Destroy (other.gameObject);
+			}
 		}
 	}
 

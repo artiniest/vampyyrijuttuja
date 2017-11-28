@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enem_boss : Enemy 
 {
-	int hitPoints = 100;
+	public static int hitPoints = 100;
 
 	public override void Start ()
 	{
@@ -19,11 +19,12 @@ public class Enem_boss : Enemy
 
 	void Attack()
 	{
-		if (player != null && Vector2.Distance (transform.position, player.transform.position) <= 2.5f)//&&playerdodges) 
+
+		if (player != null && Vector2.Distance (transform.position, player.transform.position) <= minDistance + 1 && Player2.inShadows == false)//&&playerdodges) 
 		{
+			mator.SetTrigger("Attack");
 			CameraFollow.shakeDuration += 0.5f;
 			Player2.hitPoints -= dmg;
-			mator.SetTrigger("Attack");
 		}
 	}
 }
