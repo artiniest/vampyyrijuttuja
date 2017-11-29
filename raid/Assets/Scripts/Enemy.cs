@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
 	protected SpriteRenderer rend;
 	protected AudioSource enemyHit;
 
-
 	public virtual void Start ()
 	{
 		rend = GetComponent<SpriteRenderer> ();

@@ -29,4 +29,9 @@ public class Enemy_haldberd : Enemy
 	{
 		GetComponent<AudioSource>().Play();
 	}
+
+	void Death ()
+	{
+		Destroy (this.gameObject);
+	}
 }
