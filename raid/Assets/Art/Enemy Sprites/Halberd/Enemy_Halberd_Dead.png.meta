@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 1ceeea3e577ef4417b1b701e15437d67
-timeCreated: 1511868112
+guid: fd4c0c6cc1be643d9b57e8efcaf3c4b3
+timeCreated: 1511867633
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Enemy_TorchMale_Idle_SpriteSheet_0
-    21300002: Enemy_TorchMale_Idle_SpriteSheet_1
-    21300004: Enemy_TorchMale_Idle_SpriteSheet_2
-    21300006: Enemy_TorchMale_Idle_SpriteSheet_3
-    21300008: Enemy_TorchMale_Idle_SpriteSheet_4
+    21300000: Enemy_Halberd_Dead_0
+    21300002: Enemy_Halberd_Dead_1
+    21300004: Enemy_Halberd_Dead_2
+    21300006: Enemy_Halberd_Dead_3
+    21300008: Enemy_Halberd_Dead_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -75,67 +75,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_TorchMale_Idle_SpriteSheet_0
+      name: Enemy_Halberd_Dead_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 63
-        height: 69
+        width: 77
+        height: 80
       alignment: 9
-      pivot: {x: 0.63720393, y: 0.5}
+      pivot: {x: 0.74, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy_TorchMale_Idle_SpriteSheet_1
+      name: Enemy_Halberd_Dead_1
       rect:
         serializedVersion: 2
-        x: 78
+        x: 80
         y: 0
-        width: 63
-        height: 69
+        width: 77
+        height: 80
       alignment: 9
-      pivot: {x: 0.68, y: 0.5}
+      pivot: {x: 0.74, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy_TorchMale_Idle_SpriteSheet_2
+      name: Enemy_Halberd_Dead_2
       rect:
         serializedVersion: 2
-        x: 156
+        x: 160
         y: 0
-        width: 63
-        height: 69
+        width: 77
+        height: 80
       alignment: 9
-      pivot: {x: 0.7, y: 0.5}
+      pivot: {x: 0.74, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy_TorchMale_Idle_SpriteSheet_3
+      name: Enemy_Halberd_Dead_3
       rect:
         serializedVersion: 2
-        x: 237
+        x: 242
         y: 0
-        width: 63
-        height: 69
+        width: 77
+        height: 80
       alignment: 9
-      pivot: {x: 0.7, y: 0.5}
+      pivot: {x: 0.74, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Enemy_TorchMale_Idle_SpriteSheet_4
+      name: Enemy_Halberd_Dead_5
       rect:
         serializedVersion: 2
-        x: 321
+        x: 320
         y: 0
-        width: 63
-        height: 69
+        width: 80
+        height: 80
       alignment: 9
-      pivot: {x: 0.68, y: 0.5}
+      pivot: {x: 0.74, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
