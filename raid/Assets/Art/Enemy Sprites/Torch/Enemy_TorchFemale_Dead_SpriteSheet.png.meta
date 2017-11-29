@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 8d1c4a3196bd3414d9a1bd5f5297e8c4
-timeCreated: 1511951763
+guid: 1d16bc5024d7e4bcdb383bb26c737dec
+timeCreated: 1511950087
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: lyhty1_spritesheet_0
-    21300002: lyhty1_spritesheet_1
-    21300004: lyhty1_spritesheet_2
-    21300006: lyhty1_spritesheet_3
-    21300008: lyhty1_spritesheet_4
+    21300000: Enemy_TorchFemale_Dead_SpriteSheet_0
+    21300002: Enemy_TorchFemale_Dead_SpriteSheet_1
+    21300004: Enemy_TorchFemale_Dead_SpriteSheet_2
+    21300006: Enemy_TorchFemale_Dead_SpriteSheet_3
+    21300008: Enemy_TorchFemale_Dead_SpriteSheet_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -75,67 +75,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lyhty1_spritesheet_0
+      name: Enemy_TorchFemale_Dead_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 12
         y: 0
-        width: 70
-        height: 124
-      alignment: 9
-      pivot: {x: 0.4957, y: 0.5}
+        width: 55
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lyhty1_spritesheet_1
+      name: Enemy_TorchFemale_Dead_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 86
+        x: 91
         y: 0
-        width: 70
-        height: 124
-      alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lyhty1_spritesheet_2
+      name: Enemy_TorchFemale_Dead_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 158
+        x: 164
         y: 0
-        width: 70
-        height: 124
-      alignment: 9
-      pivot: {x: 0.4957, y: 0.5}
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lyhty1_spritesheet_3
+      name: Enemy_TorchFemale_Dead_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 241
+        x: 252
         y: 0
-        width: 70
-        height: 124
-      alignment: 9
-      pivot: {x: 0.4243, y: 0.5}
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lyhty1_spritesheet_4
+      name: Enemy_TorchFemale_Dead_SpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 314
+        x: 331
         y: 0
-        width: 70
-        height: 124
-      alignment: 9
-      pivot: {x: 0.41, y: 0.5}
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
