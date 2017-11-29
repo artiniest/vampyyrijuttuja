@@ -173,8 +173,7 @@ public class Player2 : MonoBehaviour
 		{
 			yield return new WaitForSeconds (0.2f);
 			other.GetComponent<AudioSource>().Play();
-			yield return new WaitForSeconds (0.2f);
-			Destroy (other.gameObject);
+			other.GetComponent<Animator>().SetBool ("Dead", true);
 		}
 
 		else if (other.tag == "EnemyBoss" && inShadows == false)

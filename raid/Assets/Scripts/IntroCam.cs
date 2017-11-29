@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class IntroCam : MonoBehaviour 
 {
 	public Text intoText;
+	public GameObject player;
 	public string levelToLoad;
 	float letterRate = 0.05f;
 
@@ -23,6 +24,8 @@ public class IntroCam : MonoBehaviour
 
 	void Update()
 	{
+		intoText.text = str;
+
 		if (moveCam == true && transform.position.y > 0.5f)
 		{
 			transform.Translate (Vector2.MoveTowards (new Vector2 (0,0), transform.position, -2f * Time.deltaTime));
@@ -34,8 +37,6 @@ public class IntroCam : MonoBehaviour
 			intoText.text = "";
 			StartCoroutine (Animation2());
 		}
-
-		intoText.text = str;
 	}
 
 	IEnumerator Animation (string strComplete)
@@ -65,6 +66,12 @@ public class IntroCam : MonoBehaviour
 	IEnumerator Animation2 ()
 	{
 		yield return new WaitForSeconds (3);
-		print ("inner monologue?");
+		intoText.enabled = false;
+		yield return new WaitForSeconds (3);
+		player.GetComponent<Animator>().SetTrigger("Walk");
+		yield return new WaitForSeconds(2);
+		player.SetActive (false);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (1);
 	}
 }
+
