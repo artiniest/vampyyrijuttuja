@@ -116,12 +116,10 @@ public class Player2 : MonoBehaviour
 
 			if (rendo.flipX == false)
 			{
-				wpnColl.enabled = true;
 				wpnColl.size = new Vector2(3.5f, wpnColl.size.y);
 				wpnColl.center = new Vector2 (1.5f, wpnColl.center.y);
 			} else if (rendo.flipX == true)
 			{
-				wpnColl.enabled = true;
 				wpnColl.size = new Vector2(3.5f, wpnColl.size.y);
 				wpnColl.center = new Vector2 (-1.5f, wpnColl.center.y);
 
@@ -134,12 +132,10 @@ public class Player2 : MonoBehaviour
 
 			if (rendo.flipX == false)
 			{
-				wpnColl.enabled = true;
 				wpnColl.size = new Vector2(1.5f, wpnColl.size.y);
 				wpnColl.center = new Vector2 (0.75f, wpnColl.center.y);
 			} else if (rendo.flipX == true)
 			{
-				wpnColl.enabled = true;
 				wpnColl.size = new Vector2(1.5f, wpnColl.size.y);
 				wpnColl.center = new Vector2 (-0.75f, wpnColl.center.y);
 			}
@@ -171,7 +167,6 @@ public class Player2 : MonoBehaviour
 	{
 		if (other.tag == "Enemy" && inShadows == false)
 		{
-			yield return new WaitForSeconds (0.2f);
 			other.GetComponent<AudioSource>().Play();
 			other.GetComponent<Animator>().SetBool ("Dead", true);
 			other.GetComponent<Enemy>().enabled = false;
@@ -179,7 +174,6 @@ public class Player2 : MonoBehaviour
 
 		else if (other.tag == "EnemyBoss" && inShadows == false)
 		{
-			yield return new WaitForSeconds (0.2f);
 			other.GetComponent<AudioSource>().Play();
 			yield return new WaitForSeconds (0.2f);
 			Enem_boss.hitPoints -=10;
@@ -206,5 +200,10 @@ public class Player2 : MonoBehaviour
 	public void PlaySound()
 	{
 		sourssi.Play();
+	}
+
+	public void Attacks()
+	{
+		wpnColl.enabled = true;
 	}
 }

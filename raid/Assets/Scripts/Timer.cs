@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
 	void Start ()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
-		childo = transform.GetChild(0).gameObject;
+		childo = this.transform.GetChild(0).gameObject;
 		childo.SetActive(false);
 	}
 
@@ -28,12 +28,10 @@ public class Timer : MonoBehaviour
 		yield return new WaitForSeconds (WaitTime);
 
 		bool didItHappen = false;
-		if (Vector2.Distance (transform.position, player.transform.position) > 8f)
+		if (this.transform.GetChild(0) != null && Vector2.Distance (transform.position, player.transform.position) > 8f)
 		{
 			childo.SetActive (true);
 			didItHappen = true;
-			childo.transform.SetParent(null);
-			Destroy (this.gameObject);
 		}
 
 		if (didItHappen == false)
