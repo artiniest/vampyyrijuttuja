@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
 		yield return new WaitForSeconds (WaitTime);
 
 		bool didItHappen = false;
-		if (Vector2.Distance (transform.position, player.transform.position) > 2.5f)
+		if (Vector2.Distance (transform.position, player.transform.position) > 8f)
 		{
 			childo.SetActive (true);
 			didItHappen = true;
