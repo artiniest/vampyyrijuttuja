@@ -26,6 +26,11 @@ public class Enemy : MonoBehaviour
 
 	void Update ()
 	{
+		if (player == null)
+		{
+			StartCoroutine (FindPlayer());
+		}
+
 		RaycastHit hit;
 
 		if (player != null && Physics.Raycast (transform.position, player.transform.position - transform.position, out hit))
