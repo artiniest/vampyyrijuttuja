@@ -9,7 +9,7 @@ public class Enemy_pitchfork : Enemy
 		base.Start ();
 		dmg = 0.20f;
 		atkRate = 1.5f;
-		moveRate = 0.01f;
+		moveRate = 0.05f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
 	}

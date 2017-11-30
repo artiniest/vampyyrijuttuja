@@ -9,7 +9,7 @@ public class Enemy_haldberd : Enemy
 		base.Start ();
 		dmg = 0.30f;
 		atkRate = 2;
-		moveRate = 0.02f;
+		moveRate = 0.05f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
 	}

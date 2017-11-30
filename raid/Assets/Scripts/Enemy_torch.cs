@@ -9,7 +9,7 @@ public class Enemy_torch : Enemy
 		base.Start ();
 		dmg = 0.10f;
 		atkRate = 0.5f;
-		moveRate = 0.25f;
+		moveRate = 0.12f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
 	}
