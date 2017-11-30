@@ -5,14 +5,13 @@ using UnityEngine;
 public class Timer : MonoBehaviour 
 {
 	public float WaitTime = 1f;
+	public GameObject EnemyToDisable;
 	GameObject player;
-	GameObject childo;
 
 	void Start ()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
-		childo = this.transform.GetChild(0).gameObject;
-		childo.SetActive(false);
+		EnemyToDisable.SetActive (false);
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -28,9 +27,9 @@ public class Timer : MonoBehaviour
 		yield return new WaitForSeconds (WaitTime);
 
 		bool didItHappen = false;
-		if (this.transform.GetChild(0) != null && Vector2.Distance (transform.position, player.transform.position) > 8f)
+		if (EnemyToDisable != null && Vector2.Distance (transform.position, player.transform.position) > 8f)
 		{
-			childo.SetActive (true);
+			EnemyToDisable.SetActive (true);
 			didItHappen = true;
 		}
 
