@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
 	protected float dmg;
 	protected float atkRate;
-	protected float moveRate = 0.05f;
+	protected float moveRate = 0.07f;
 	protected float minDistance = 1.2f;
 	protected float maxDistance = 10f;
 
@@ -33,14 +33,13 @@ public class Enemy : MonoBehaviour
 
 		RaycastHit hit;
 
-		if (player != null && Physics.Raycast (transform.position, player.transform.position - transform.position, out hit))
+		if (player != null && Physics.Raycast (transform.position, player.transform.position - transform.position, out hit) && mator.GetBool("Dead") == false)
 		{
 			if (Vector2.Distance (player.transform.position, transform.position) >= minDistance && Vector2.Distance (player.transform.position, transform.position) <= maxDistance && Player2.inShadows == false)
 			{
 				if (hit.distance >= minDistance)
 				{
 					transform.position = Vector2.MoveTowards (transform.position, player.transform.position, moveRate);
-					//transform.position = new Vector3 (transform.position.x, transform.position.y, -9);
 					mator.SetBool ("seesPlayer", true);
 				} else if (hit.distance <= minDistance)
 				{

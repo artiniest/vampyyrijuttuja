@@ -11,7 +11,7 @@ public class Enem_boss : Enemy
 		base.Start ();
 		dmg = 0.20f;
 		atkRate = 3;
-		moveRate = 0.007f;
+		moveRate = 0.07f;
 		minDistance = 2.5f;
 
 		InvokeRepeating ("Attack", 0, atkRate);
@@ -19,18 +19,36 @@ public class Enem_boss : Enemy
 
 	void Attack()
 	{
-
-		if (player != null && Vector2.Distance (transform.position, player.transform.position) <= minDistance + 1 && Player2.inShadows == false)//&&playerdodges) 
+		if (GetComponent<Animator>().GetBool("Dead") == false)
 		{
-			mator.SetTrigger("Attack");
-			CameraFollow.shakeDuration += 0.5f;
-			Player2.hitPoints -= dmg;
-			GetComponent<AudioSource>().Play();
+			if (player != null && Vector2.Distance (transform.position, player.transform.position) <= minDistance + 1 && Player2.inShadows == false)
+			{
+				mator.SetTrigger("Attack");
+				mator.SetBool("seesPlayer", false);
+			}
 		}
+	}
+
+	void Damage ()
+	{
+		CameraFollow.shakeDuration += 0.5f;
+		Player2.hitPoints -= dmg;
+		GetComponent<AudioSource>().Play();
 	}
 
 	void PlaySound()
 	{
 		GetComponent<AudioSource>().Play();
+	}
+
+	void EpicDeath()
+	{
+		CameraFollow.shakeDuration += 2f;
+		CameraFollow.shakeAmount += 0.8f;
+	}
+
+	void Die()
+	{
+		Destroy (this.gameObject);
 	}
 }
