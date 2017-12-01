@@ -1,0 +1,398 @@
+fileFormatVersion: 2
+guid: d576e64ba6d244b1abe2f620a3409d43
+timeCreated: 1512130181
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Boss_dead_spritesheet2_0
+    21300002: Boss_dead_spritesheet2_1
+    21300004: Boss_dead_spritesheet2_2
+    21300006: Boss_dead_spritesheet2_3
+    21300008: Boss_dead_spritesheet2_4
+    21300010: Boss_dead_spritesheet2_5
+    21300012: Boss_dead_spritesheet2_6
+    21300014: Boss_dead_spritesheet2_7
+    21300016: Boss_dead_spritesheet2_8
+    21300018: Boss_dead_spritesheet2_9
+    21300020: Boss_dead_spritesheet2_10
+    21300022: Boss_dead_spritesheet2_11
+    21300024: Boss_dead_spritesheet2_12
+    21300026: Boss_dead_spritesheet2_13
+    21300028: Boss_dead_spritesheet2_14
+    21300030: Boss_dead_spritesheet2_15
+    21300032: Boss_dead_spritesheet2_16
+    21300034: Boss_dead_spritesheet2_17
+    21300036: Boss_dead_spritesheet2_18
+    21300038: Boss_dead_spritesheet2_19
+    21300040: Boss_dead_spritesheet2_20
+    21300042: Boss_dead_spritesheet2_21
+    21300044: Boss_dead_spritesheet2_22
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 27
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 130
+        width: 113
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 130
+        width: 113
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 130
+        width: 113
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 130
+        width: 113
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_4
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 130
+        width: 113
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_6
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 130
+        width: 116
+        height: 101
+      alignment: 9
+      pivot: {x: 0.73, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_8
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 130
+        width: 121
+        height: 101
+      alignment: 9
+      pivot: {x: 0.74, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_9
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 130
+        width: 122
+        height: 101
+      alignment: 9
+      pivot: {x: 0.82, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_10
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 130
+        width: 123
+        height: 101
+      alignment: 9
+      pivot: {x: 0.815, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_12
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 130
+        width: 123
+        height: 101
+      alignment: 9
+      pivot: {x: 0.815, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_14
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 130
+        width: 126
+        height: 101
+      alignment: 9
+      pivot: {x: 0.7959, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_15
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 130
+        width: 129
+        height: 101
+      alignment: 9
+      pivot: {x: 0.778, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_16
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 130
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.773, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_17
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 130
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_20
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_7
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_11
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 129
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Boss_dead_spritesheet2_13
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 131
+        height: 101
+      alignment: 9
+      pivot: {x: 0.77, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
