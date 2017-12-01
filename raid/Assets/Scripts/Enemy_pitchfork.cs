@@ -22,15 +22,14 @@ public class Enemy_pitchfork : Enemy
 			{
 				mator.SetBool ("seesPlayer", false);
 				mator.SetTrigger("Attack");
-				CameraFollow.shakeDuration += 0.5f;
-				Player2.hitPoints -= dmg;
-				GetComponent<AudioSource>().Play();
 			}
 		}
 	}
 
-	void PlaySound()
+	void Damage()
 	{
+		CameraFollow.shakeDuration += 0.5f;
+		Player2.hitPoints -= dmg;
 		GetComponent<AudioSource>().Play();
 	}
 
