@@ -163,7 +163,7 @@ public class Player2 : MonoBehaviour
 		Rune.GetComponent<Animator>().SetBool("isLit", false);
 	}
 
-	IEnumerator OnTriggerEnter (Collider other)
+	void OnTriggerEnter (Collider other)
 	{
 		if (other.tag == "Enemy" && inShadows == false)
 		{
@@ -175,12 +175,11 @@ public class Player2 : MonoBehaviour
 		else if (other.tag == "EnemyBoss" && inShadows == false)
 		{
 			other.GetComponent<AudioSource>().Play();
-			yield return new WaitForSeconds (0.2f);
-			Enem_boss.hitPoints -=10;
+			Enem_boss.hitPoints -= 10;
 
 			if (Enem_boss.hitPoints < 1)
 			{
-				Destroy (other.gameObject);
+				other.GetComponent<Animator>().SetBool("Dead", true);
 			}
 		}
 	}
