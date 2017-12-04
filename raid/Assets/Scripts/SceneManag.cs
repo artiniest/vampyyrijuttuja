@@ -15,6 +15,10 @@ public class SceneManag : MonoBehaviour
 	bool outroMovement = false;
 	public bool hasBeenEnemies = false;
 
+	float playerHP;
+	public GameObject healthBar;
+
+
 	void Start ()
 	{
 		StartCoroutine (StartAnimation());
@@ -22,6 +26,18 @@ public class SceneManag : MonoBehaviour
 
 	void Update ()
 	{
+		playerHP = Player2.hitPoints;
+
+		if (healthBar != null)
+		{
+			healthBar.transform.localScale = new Vector2 (playerHP, healthBar.transform.localScale.y);
+
+			if (healthBar.transform.localScale.x <= 0)
+			{
+				healthBar.transform.localScale = new Vector2 (0, healthBar.transform.localScale.y);
+			}
+		}
+
 		Enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 
 		if (Enemies.Length > 0)
@@ -37,7 +53,6 @@ public class SceneManag : MonoBehaviour
 		if (outroMovement == true)
 		{
 			player.transform.Translate(new Vector2 (5 * Time.deltaTime, 0));
-			//player.transform.position = Vector2.MoveTowards(player.transform.position, new Vector2 (9f, player.transform.position.y), 5f * Time.deltaTime);
 		}
 
 		if (player.transform.position.x == 0)

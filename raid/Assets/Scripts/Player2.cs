@@ -11,7 +11,6 @@ public class Player2 : MonoBehaviour
 	public SpriteRenderer rendo;
 	public GameObject Rune;
 	public BoxCollider wpnColl;
-	public GameObject healthBar;
 	public AudioSource sourssi;
 	public AudioSource enemyHit;
 
@@ -52,7 +51,7 @@ public class Player2 : MonoBehaviour
 
 	void Update ()
 	{
-		if (healthBar != null)
+		/*if (healthBar != null)
 		{
 			healthBar.transform.localScale = new Vector2 (hitPoints, healthBar.transform.localScale.y);
 
@@ -60,7 +59,7 @@ public class Player2 : MonoBehaviour
 			{
 				healthBar.transform.localScale = new Vector2 (0, healthBar.transform.localScale.y);
 			}
-		}
+		}*/
 
 		if (hitPoints < 0.01f)
 		{
