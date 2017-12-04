@@ -14,7 +14,7 @@ public class IntroCam : MonoBehaviour
 	private string str;
 	public string [] TextToAnimate;
 	int nextLine = 0;
-	bool moveCam = false;
+	public static bool moveCam = false;
 	bool secondAnim = false;
 
 	void Start () 
@@ -65,13 +65,13 @@ public class IntroCam : MonoBehaviour
 
 	IEnumerator Animation2 ()
 	{
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (3f);
 		intoText.enabled = false;
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (1.5f);
 		player.GetComponent<Animator>().SetTrigger("Walk");
 		yield return new WaitForSeconds(2);
 		player.SetActive (false);
-		UnityEngine.SceneManagement.SceneManager.LoadScene (1);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (levelToLoad);
 	}
 }
 

@@ -30,6 +30,9 @@ public class Timer : MonoBehaviour
 			yield return null;
 		}
 
-		EnemyToDisable.SetActive(true);
+		if (EnemyToDisable != null)
+		{
+			EnemyToDisable.SetActive(true);
+		}
 	}
 }

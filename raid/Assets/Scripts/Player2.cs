@@ -36,6 +36,20 @@ public class Player2 : MonoBehaviour
 
 	//Hyökkäys
 
+	void Start ()
+	{
+		if (hitPoints < 0.001f)
+		{
+			hitPoints = 1;
+		}
+
+		CameraFollow.shakeDuration = 0;
+
+		canMove = true;
+		inShadows = false;
+	
+	}
+
 	void Update ()
 	{
 		if (healthBar != null)
@@ -46,6 +60,13 @@ public class Player2 : MonoBehaviour
 			{
 				healthBar.transform.localScale = new Vector2 (0, healthBar.transform.localScale.y);
 			}
+		}
+
+		if (hitPoints < 0.01f)
+		{
+			maattori.SetBool("Dead", true);
+			canMove = false;
+			inShadows = true;
 		}
 
 		//Movement things
@@ -204,5 +225,10 @@ public class Player2 : MonoBehaviour
 	public void Attacks()
 	{
 		wpnColl.enabled = true;
+	}
+
+	void DeadScene ()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 	}
 }
