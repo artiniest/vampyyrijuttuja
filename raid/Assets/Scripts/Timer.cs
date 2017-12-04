@@ -25,9 +25,11 @@ public class Timer : MonoBehaviour
 	IEnumerator Enable ()
 	{
 		yield return new WaitForSeconds (WaitTime);
-		if (EnemyToDisable != null && Vector2.Distance (transform.position, player.transform.position) > 8f)
+		while (EnemyToDisable != null && Vector2.Distance (transform.position, player.transform.position) < 8f)
 		{
-			EnemyToDisable.SetActive (true);
+			yield return null;
 		}
+
+		EnemyToDisable.SetActive(true);
 	}
 }
