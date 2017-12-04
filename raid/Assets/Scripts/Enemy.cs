@@ -14,13 +14,13 @@ public class Enemy : MonoBehaviour
 	protected GameObject player;
 	protected Animator mator;
 	protected SpriteRenderer rend;
-	protected AudioSource enemyHit;
+	protected AudioSource sourse;
 
 	public virtual void Start ()
 	{
 		rend = GetComponent<SpriteRenderer> ();
 		mator = GetComponent<Animator>();
-		enemyHit = GetComponent<AudioSource>();
+		sourse = GetComponent<AudioSource>();
 		StartCoroutine(FindPlayer());
 	}
 

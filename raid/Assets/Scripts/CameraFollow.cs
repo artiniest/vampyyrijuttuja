@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
 	public Vector3 offSet;
 
 	public static float shakeDuration = 0f;
-	public static float shakeAmount = 0.01f;
+	public float shakeAmount = 0.01f;
 	public float decrease = 2;
 
 	void LateUpdate()

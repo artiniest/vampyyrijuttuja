@@ -18,7 +18,7 @@ public class Enemy_torch : Enemy
 	{
 		CameraFollow.shakeDuration += 0.5f;
 		Player2.hitPoints -= dmg;
-		GetComponent<AudioSource>().Play();
+		sourse.Play();
 	}
 
 	void Death ()

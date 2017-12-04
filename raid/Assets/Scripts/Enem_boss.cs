@@ -19,7 +19,7 @@ public class Enem_boss : Enemy
 
 	void AttackBoss()
 	{
-		if (GetComponent<Animator>().GetBool("Dead") == false)
+		if (mator.GetBool("Dead") == false)
 		{
 			if (player != null && Vector2.Distance (transform.position, player.transform.position) <= minDistance + 1 && Player2.inShadows == false)
 			{
@@ -33,18 +33,17 @@ public class Enem_boss : Enemy
 	{
 		CameraFollow.shakeDuration += 0.5f;
 		Player2.hitPoints -= dmg;
-		GetComponent<AudioSource>().Play();
+		sourse.Play();
 	}
 
 	void PlaySound()
 	{
-		GetComponent<AudioSource>().Play();
+		sourse.Play();
 	}
 
 	void EpicDeath()
 	{
 		CameraFollow.shakeDuration += 2f;
-		CameraFollow.shakeAmount += 0.8f;
 		GetComponent<BoxCollider>().enabled = false;
 	}
 
