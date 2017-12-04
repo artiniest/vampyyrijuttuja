@@ -51,16 +51,6 @@ public class Player2 : MonoBehaviour
 
 	void Update ()
 	{
-		/*if (healthBar != null)
-		{
-			healthBar.transform.localScale = new Vector2 (hitPoints, healthBar.transform.localScale.y);
-
-			if (healthBar.transform.localScale.x <= 0)
-			{
-				healthBar.transform.localScale = new Vector2 (0, healthBar.transform.localScale.y);
-			}
-		}*/
-
 		if (hitPoints < 0.01f)
 		{
 			maattori.SetBool("Dead", true);
