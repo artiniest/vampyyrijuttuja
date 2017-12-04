@@ -57,6 +57,18 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	public virtual void Attack()
+	{
+		if (mator.isActiveAndEnabled == true && mator.GetBool("Dead") == false)
+		{
+			if (player != null && Vector2.Distance (transform.position, player.transform.position) <= 1.5f && Player2.inShadows == false)//&&playerdodges) 
+			{
+				mator.SetBool ("seesPlayer", false);
+				mator.SetTrigger("Attack");
+			}
+		}
+	}
+
 	IEnumerator FindPlayer()
 	{
 		yield return new WaitForSeconds(0.5f);

@@ -14,10 +14,10 @@ public class Enem_boss : Enemy
 		moveRate = 0.07f;
 		minDistance = 2.5f;
 
-		InvokeRepeating ("Attack", 0, atkRate);
+		InvokeRepeating ("AttackBoss", 0, atkRate);
 	}
 
-	void Attack()
+	void AttackBoss()
 	{
 		if (GetComponent<Animator>().GetBool("Dead") == false)
 		{
@@ -45,6 +45,7 @@ public class Enem_boss : Enemy
 	{
 		CameraFollow.shakeDuration += 2f;
 		CameraFollow.shakeAmount += 0.8f;
+		GetComponent<BoxCollider>().enabled = false;
 	}
 
 	void Die()

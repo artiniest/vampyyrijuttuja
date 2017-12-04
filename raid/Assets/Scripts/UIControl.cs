@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIControl : MonoBehaviour 
 {
@@ -62,6 +63,6 @@ public class UIControl : MonoBehaviour
 	IEnumerator Load ()
 	{
 		yield return new WaitForSeconds (10);
-		Application.LoadLevel(levelToLoad);
+		UnityEngine.SceneManagement.SceneManager.LoadScene(levelToLoad);
 	}
 }
