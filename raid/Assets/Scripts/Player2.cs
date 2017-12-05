@@ -25,7 +25,7 @@ public class Player2 : MonoBehaviour
 	public float shadowTime = 2f;
 	bool shadowReady = false;
 	public static bool inShadows = false;
-	GameObject[] enemies;
+	public static GameObject[] enemies;
 
 	//Attacking things
 	public static float hitPoints = 1f;
