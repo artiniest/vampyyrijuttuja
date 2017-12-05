@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneManag : MonoBehaviour 
 {
-	public GameObject[] EnemyPrefabs;
-	public Transform [] spawns;
 	public GameObject [] Enemies;
 	public GameObject player;
 	public string sceneToLoad;
