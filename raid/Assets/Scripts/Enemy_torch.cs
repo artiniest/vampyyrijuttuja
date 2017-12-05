@@ -23,6 +23,7 @@ public class Enemy_torch : Enemy
 
 	void Death ()
 	{
+		enemycount.OneLess();
 		Destroy (this.gameObject);
 	}
 }

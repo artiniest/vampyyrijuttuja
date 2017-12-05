@@ -23,6 +23,7 @@ public class Enemy_haldberd : Enemy
 
 	void Death ()
 	{
+		enemycount.OneLess();
 		Destroy (this.gameObject);
 	}
 }
