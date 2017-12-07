@@ -9,7 +9,7 @@ public class Enem_boss : Enemy
 	public override void Start ()
 	{
 		base.Start ();
-		dmg = 0.20f;
+		dmg = 0.15f;
 		atkRate = 3;
 		moveRate = 0.07f;
 		minDistance = 2.5f;
@@ -45,6 +45,7 @@ public class Enem_boss : Enemy
 	{
 		CameraFollow.shakeDuration += 2f;
 		GetComponent<BoxCollider>().enabled = false;
+        GetComponent<Rigidbody>().useGravity = false;
 	}
 
 	void Die()
