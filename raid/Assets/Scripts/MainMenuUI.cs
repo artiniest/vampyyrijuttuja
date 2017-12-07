@@ -5,13 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour 
 {
+    public GameObject creds;
+
 	public void StartGame ()
 	{
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Intro");
 	}
 
-	public void Tutorial()
+	public void EnableCreds()
 	{
-		UnityEngine.SceneManagement.SceneManager.LoadScene("Tutorial");
+        if (creds.activeInHierarchy == false)
+        {
+            creds.SetActive(true);
+        }
+        else
+        {
+            creds.SetActive(false);
+        }
 	}
 }

@@ -35,8 +35,8 @@ public class SceneManag : MonoBehaviour
 				healthBar.transform.localScale = new Vector2 (0, healthBar.transform.localScale.y);
 			}
 		}
-
-		Enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+        
+        Enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 
 		if (Enemies.Length > 0)
 		{

@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: d2292d40c47994b96ba64eb4602637e5
-timeCreated: 1512655587
+guid: ce4df9ec75befbb4fa4ff2f46f0ee3b3
+timeCreated: 1512664606
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EndingScreen_Sheet_0
-    21300002: EndingScreen_Sheet_1
+    21300000: "x_bigger_spritesheet \u2013 kopio_0"
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -47,7 +46,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 40, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 27
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -70,39 +69,43 @@ TextureImporter:
   - buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EndingScreen_Sheet_0
+      name: "x_bigger_spritesheet \u2013 kopio_0"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 40
         y: 0
-        width: 420
-        height: 288
-      alignment: 9
-      pivot: {x: 0.51591766, y: 0.5038689}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: EndingScreen_Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 0
-        width: 420
-        height: 288
-      alignment: 9
-      pivot: {x: 0.5079588, y: 0.5038689}
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -175,23 +175,23 @@ public class Player2 : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Enemy" && inShadows == false)
+		if (other.tag == "Enemy" && inShadows == false && other.GetComponent<Enem_boss>() != null)
 		{
-			other.GetComponent<AudioSource>().Play();
-			other.GetComponent<Animator>().SetBool ("Dead", true);
-			other.GetComponent<Enemy>().enabled = false;
-		}
+            other.GetComponent<AudioSource>().Play();
+            Enem_boss.hitPoints -= 10;
 
-		else if (other.tag == "EnemyBoss" && inShadows == false)
+            if (Enem_boss.hitPoints < 1)
+            {
+                other.GetComponent<Animator>().SetBool("Dead", true);
+            }
+        }
+
+		else if (other.tag == "Enemy" && inShadows == false && other.GetComponent<Enem_boss>() == null)
 		{
-			other.GetComponent<AudioSource>().Play();
-			Enem_boss.hitPoints -= 10;
-
-			if (Enem_boss.hitPoints < 1)
-			{
-				other.GetComponent<Animator>().SetBool("Dead", true);
-			}
-		}
+            other.GetComponent<AudioSource>().Play();
+            other.GetComponent<Animator>().SetBool("Dead", true);
+            other.GetComponent<Enemy>().enabled = false;
+        }
 	}
 
 	public void RegainControl ()

@@ -12,7 +12,7 @@ public class enemycount : MonoBehaviour
 
 	void Update ()
 	{
-		if (ticker < 0 && activeIndicatorsMinusOne != null)
+		if (ticker < 0 && activeIndicatorsMinusOne != -1)
 		{
 			counts[activeIndicatorsMinusOne].enabled = false;
 			ticker = 4;
