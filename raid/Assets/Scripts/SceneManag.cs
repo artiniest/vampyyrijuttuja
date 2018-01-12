@@ -8,6 +8,7 @@ public class SceneManag : MonoBehaviour
 	public GameObject [] Enemies;
 	public GameObject player;
 	public string sceneToLoad;
+    public static string publicScene;
 
 	bool introMovement = false;
 	bool outroMovement = false;
@@ -24,6 +25,8 @@ public class SceneManag : MonoBehaviour
 
 	void Update ()
 	{
+        publicScene = sceneToLoad;
+
 		playerHP = Player2.hitPoints;
 
 		if (healthBar != null)

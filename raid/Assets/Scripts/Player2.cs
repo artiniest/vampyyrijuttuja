@@ -51,6 +51,15 @@ public class Player2 : MonoBehaviour
 
 	void Update ()
 	{
+        if (Input.GetKeyDown(KeyCode.H))
+            {
+                hitPoints = 1;
+            }
+        if (Input.GetKeyDown(KeyCode.L))
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManag.publicScene);
+            }
+
 		if (hitPoints < 0.01f)
 		{
 			maattori.SetBool("Dead", true);

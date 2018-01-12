@@ -24,6 +24,11 @@ public class IntroCam : MonoBehaviour
 
 	void Update()
 	{
+        if (Input.GetKeyDown (KeyCode.L))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene (levelToLoad);
+        }
+
 		intoText.text = str;
 
 		if (moveCam == true && transform.position.y > 0.5f)
